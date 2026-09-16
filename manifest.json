@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "Shopee MY Price Exporter",
+  "version": "1.0",
+  "description": "Extract product data from Shopee Malaysia search results and export to Excel (CSV).",
+  "permissions": ["activeTab", "scripting"],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://shopee.com.my/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
